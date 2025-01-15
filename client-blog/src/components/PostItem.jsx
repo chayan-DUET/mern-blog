@@ -1,9 +1,26 @@
 import React from 'react'
-
-const PostItem = () => {
+import {Link} from "react-router-dom"
+import Logo from '../images/blog1.jpg'
+import PostAuthor from './PostAuthor'
+const PostItem = ({postID, category, title, desc, authorID, thumbnail}) => {
   return (
     <div>
-      Post Item
+      <article className="post">
+        <div className="post__thumbnail">
+          <img src={thumbnail} alt={title} />
+          {/* <img src={Logo} alt='Navbar Logo' /> */}
+        </div>
+        <div className="post__content">
+          <Link to={`/posts/${postID}`}>
+          <h3>{title}</h3>
+          </Link>
+          <p>{desc}</p>
+          <div className="post__footer">
+            <PostAuthor />
+            <Link to={`/posts/categories/${category}`}> {category} </Link>
+          </div>
+        </div>
+      </article>
     </div>
   )
 }

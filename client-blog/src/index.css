@@ -218,3 +218,23 @@ footer {
     color: var(--color-white);
     font-weight: 300;
 }
+
+
+
+
+/* ====================== HOME ================== */
+
+/* ====================== POSTS ================== */
+.posts__container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+}
+.post {
+    background: var(--color-white);
+    padding: 1rem;
+    border-radius: var(--radius-4);
+    padding-bottom: 2rem;
+    transition: var(--transition);
+    cursor: default;
+}
